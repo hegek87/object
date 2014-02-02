@@ -4,7 +4,7 @@
 #include "../polynomial/polynomial.h"
 #include "../vector3d/vector3d.h"
 #include "../ray/ray.h"
-#include "../ray/intersection.h"
+#include "intersection.hpp"
 
 class Shape{
 	private:
@@ -14,6 +14,6 @@ class Shape{
 		Color getColor();
 		Vector3d getPosition();
 		
-		virtual intersection getIntersection(Ray);
+		virtual intersection getIntersection(ray);
 };
 #endif
