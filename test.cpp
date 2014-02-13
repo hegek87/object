@@ -3,7 +3,12 @@
 #include "intersection.hpp"
 
 TEST(Compiles){
-	intersection t;
+	Intersection t;
+	CHECK(true);
+}
+
+TEST(Intersection){
+	Ray r(Vector3d(-10,0,0),Vector3d(0,1,1).unitVec());
 	CHECK(true);
 }
 

@@ -14,6 +14,6 @@ class Shape{
 		Color getColor();
 		Vector3d getPosition();
 		
-		virtual intersection getIntersection(ray);
+		virtual Intersection getIntersection(Ray) = 0;
 };
 #endif
