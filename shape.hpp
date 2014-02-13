@@ -11,6 +11,7 @@ class Shape{
 		Color shapeColor;
 		Vector3d position;
 	public:
+		Shape(Color, Vector3d);
 		Color getColor();
 		Vector3d getPosition();
 		

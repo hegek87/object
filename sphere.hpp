@@ -6,6 +6,7 @@ class Sphere : public Shape{
 	private:
 		double radius;
 	public:
+		Sphere(Color, Vector3d, double);
 		Intersection getIntersection(Ray);
 };
 #endif

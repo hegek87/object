@@ -1,6 +1,10 @@
 #include "sphere.hpp"
 #include "shape.hpp"
 
+Sphere::Sphere(Color col, Vector3d center, double rad) : 
+	Shape(col, center),
+	radius(rad) {}
+
 Intersection Sphere::getIntersection(Ray r){
 	//find intersect position
 	double a = 1;
