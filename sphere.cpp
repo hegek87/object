@@ -10,10 +10,12 @@ Intersection Sphere::getIntersection(Ray r){
 	double a = 1;
 	double b = 2*r.direction.dotProd(r.position-this->getPosition());
 	double c = (r.position-this->getPosition()).squareMag()-(radius*radius);
-	double abc[3] = {c, b, a};
+	std::vector<double> abc;
+	abc.push_back(a),abc.push_back(b),abc.push_back(c);
 	Polynomial intersectEq(abc, 2);
-	double *time = intersectEq.solve();
-	double closestTime = (*time < *(time+1)) ? *time : *(time+1);
+	std::vector<double> time = intersectEq.solve();
+	if(time.empty()){ return Intersection(); }
+	double closestTime = (time[0] < time[1]) ? time[0] : time[1];
 	return Intersection(	r.position+(r.direction.scalarMul(closestTime)),
 					this,
 					closestTime);
