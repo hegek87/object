@@ -12,6 +12,8 @@ class Shape{
 		Vector3d position;
 	public:
 		Shape(Color, Vector3d);
+		Shape(){}
+		virtual ~Shape(){}
 		Color getColor();
 		Vector3d getPosition();
 		
