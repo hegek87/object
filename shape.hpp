@@ -2,7 +2,7 @@
 #define SHAPE_H
 #include "../color/color.h"
 #include "../polynomial/polynomial.h"
-#include "../vector3d/vector3d.h"
+#include "../vector3d/vector3d.hpp"
 #include "../ray/ray.h"
 #include "intersection.hpp"
 

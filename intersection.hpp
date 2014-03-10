@@ -1,7 +1,7 @@
 #ifndef INTER_H
 #define INTER_H
 #include "shape.hpp"
-#include "../vector3d/vector3d.h"
+#include "../vector3d/vector3d.hpp"
 class Shape;
 
 struct Intersection{
